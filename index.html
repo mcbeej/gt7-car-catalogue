@@ -1,4 +1,4 @@
-<img id="3457" src="img/cars/3457.jpg">
+<img id="3457" src="img/cars/3457.png">
 <\img>
 
 
@@ -11,7 +11,7 @@ $.ajax({
     success: function (data) {
         $(data).find("a").attr("href", function (i, val) {
             if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                $("body").append( "<img src='"+ folder + val +"'>" );
+                $("body").append( "<img id='"+val +"' src='"+ folder + val +"'>" );
             } 
         });
     }
