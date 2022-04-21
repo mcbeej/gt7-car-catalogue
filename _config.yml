@@ -25,7 +25,6 @@ site_url: https://mcbeej.github.io/ # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
-include: [docs]
 # Build settings
 markdown: kramdown
 theme: minima
@@ -34,8 +33,8 @@ plugins:
   - jekyll-relative-links
 
 include:
-  - img
-  
+  - img/
+
 relative_links:
   enabled: true
   collections: true
