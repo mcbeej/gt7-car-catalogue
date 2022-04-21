@@ -102,6 +102,3 @@ Volkswagen.10.2192.png
 Volkswagen.11.3231.png
 Wicked Fabrication.01.3423.png
 Zagato.01.2122.png
-
-img/makes/:
-Toyata.png
