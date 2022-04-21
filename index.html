@@ -57,6 +57,7 @@
         const xhttp = new XMLHttpRequest();
         
         xhttp.onreadystatechange = function() {
+            
             if (this.readyState == 4 && this.status == 200) {
                 const fileList = this.responseText.split('\n'); // Split by lines
                 let currentFolder = '';
@@ -77,7 +78,7 @@
                         return filePath;
                     })
                     .filter(f => f); // Remove empty lines
-
+                    console.log(filePaths)
                     filePaths.map(f => { // Create and put images to the DOM
 	                    if( f.match(/\.(png)$/)){
                             let imageFile = /[^/]*$/.exec(f)[0];

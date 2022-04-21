@@ -1,6 +1,4 @@
 img/cars/:
-<<<<<<< HEAD
-=======
 AMG.01.3388.png
 AMG.02.3397.png
 AMG.03.1507.png
@@ -15,7 +13,6 @@ AMG.11.3416.png
 AMG.12.3485.png
 AMG.13.3192.png
 AMG.14.3210.png
->>>>>>> 995c59dd09df20124b759c62481113a687a40d47
 Abarth.01.1932.png
 Abarth.02.3438.png
 Abarth.03.1973.png
@@ -34,20 +31,6 @@ Alpine.03.2112.png
 Alpine.04.2116.png
 Alpine.05.3187.png
 Alpine.06.3337.png
-AMG.01.3388.png
-AMG.02.3397.png
-AMG.03.1507.png
-AMG.04.1797.png
-AMG.05.2055.png
-AMG.06.2170.png
-AMG.07.2076.png
-AMG.08.2149.png
-AMG.09.3458.png
-AMG.10.3224.png
-AMG.11.3416.png
-AMG.12.3485.png
-AMG.13.3192.png
-AMG.14.3210.png
 Amuse.01.1433.png
 Amuse.02.1549.png
 Eckerts Rod and Custom.01.3346.png
@@ -72,6 +55,7 @@ Ferrari.18.2162.png
 Ferrari.19.3433.png
 Ferrari.20.3469.png
 Ferrari.21.3263.png
+TVR.01.187.png
 Toyata.01.1044.png
 Toyata.02.604.png
 Toyata.03.63.png
@@ -105,7 +89,6 @@ Toyata.30.2187.png
 Toyata.31.3262.png
 Toyata.32.3265.png
 Toyata.33.3408.png
-TVR.01.187.png
 Volkswagen.01.1671.png
 Volkswagen.02.1778.png
 Volkswagen.03.3403.png
