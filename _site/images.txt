@@ -55,7 +55,13 @@ Ferrari.18.2162.png
 Ferrari.19.3433.png
 Ferrari.20.3469.png
 Ferrari.21.3263.png
+Super Formula.01.3371.png
+Super Formula.02.3372.png
+Suzuki.01.1385.png
+Suzuki.02.3456.png
+Suzuki.03.3480.png
 TVR.01.187.png
+Tesla.01.1896.png
 Toyota.01.1044.png
 Toyota.02.604.png
 Toyota.03.63.png
