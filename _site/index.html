@@ -52,7 +52,11 @@
         );
     }
 
-
+    function test_fuck(){
+        var img = document.createElement('img');
+        img.src = folder + "Alpine.6.3337.png";
+        document.getElementsByTagName('body')[0].append(img);
+    }
     function populate_images(){
         
         $.ajax({
