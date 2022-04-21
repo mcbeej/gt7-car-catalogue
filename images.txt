@@ -1,6 +1,5 @@
-./img/makes/:
-Toyata.png
-png
+img/cars/:
+AMG.01.3388.png
 AMG.02.3397.png
 AMG.03.1507.png
 AMG.04.1797.png
@@ -103,3 +102,6 @@ Volkswagen.10.2192.png
 Volkswagen.11.3231.png
 Wicked Fabrication.01.3423.png
 Zagato.01.2122.png
+
+img/makes/:
+Toyata.png
