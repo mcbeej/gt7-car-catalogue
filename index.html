@@ -28,7 +28,7 @@
     var legend_, used_;
     var lcd_list = [];
     var ucd_list = [];
-    var make_list = ["Abarth","Alfa Romeo", "Alpine"];
+    var make_list = ["Abarth","Alfa Romeo", "Alpine", "AMG", "Amuse", "Aston Martin", "Audi", "Autobianchi", "BAC", "BMW", "Bugatti", "Chaparral", "Chevrolet", "Chris Holstrom Concepts", "Citroen", "Daihatsu", "De Tomaso", "DMC", "Dodge", "DS AUTOMOBILES", "Eckert's Rod & Custom", "Ferrari", "Fiat","Ford", "Genesis", "Gran Turismo", "Greddy", "Honda", "Hyundai", "Infiniti", "Jaguar", "Jeep", "KTM", "Lamborghini", "Lancia", "Lexus", "Maserati", "Mazda", "McLaren", "Mercedes-Benz", "MINI", "Mitsubishi", "Nissan", "Pagani", "Peugeot", "Plymouth", "Pontiac", "Porsche", "Radical", "RE Amemiya", "Renault", "RUF", "Shelby", "Subaru", "Super Formula", "Suzuki", "Tesla", "Toyota", "TVR", "Volkswagen", "Wicked Fabrication", "Zagato"];
 
     $.getJSON('https://ddm999.github.io/gt7info/data.json', function(res){
         legend_ = res["legend"]["cars"];
@@ -119,3 +119,14 @@
     
     </script>
 </head>
+<body>
+    <div class="Header">
+        <div>Legendary Car Dealership
+            <div class="Legendtag"></div>
+        </div>
+
+        <div>Used Car Dealership
+            <div class="Usedtag"></div>
+        </div>
+    </div>
+</body>

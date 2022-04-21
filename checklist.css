@@ -1,3 +1,17 @@
+.Header {
+        position: sticky;
+        width: 100%;
+        top: 0;  
+        padding: 1em;
+        border-bottom: 1px solid rgba(76, 69, 53, 0.463);
+        background-color: #B3A994;
+        z-index: 5;
+}
+
+body {
+    background-color: #242423;
+}
+
 img {
     height: 166px;
     width: 187px;
@@ -65,4 +79,30 @@ div{
     background-color: rgb(50, 83, 219);
     top: -166px;
     left: 40px;
+}
+
+.Legendtag {
+    position: relative;
+    margin-left: 1em;
+    margin-right: 1em;
+    float: left;
+    width: 30px;
+    height: 15px;
+	transform: skew(-20deg);
+    border: 1px solid rgb(170, 168, 44);
+    background-color: rgb(200, 197, 28);
+
+}
+
+.Usedtag {
+    position: relative;
+    margin-right: 1em;
+    margin-left: 1em;
+    float: left;
+    width: 30px;
+    height: 15px;
+	transform: skew(-20deg);
+    border: 1px solid rgb(43, 58, 173);
+    background-color: rgb(50, 83, 219);
+
 }
