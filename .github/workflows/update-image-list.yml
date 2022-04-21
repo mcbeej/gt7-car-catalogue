@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2 # Checkout repo
       - shell: bash
-        run: ls -Rpm1 img/cars/ > images.txt && ls -Rpm1 img/makes/ >> makes.txt
+        run: ls -Rpm1 img/cars/ > images.txt && ls -Rpm1 img/makes/ > makes.txt
         
       - name: Save changes
         uses: actions-go/push@v1 # pushing the changes to the repo
