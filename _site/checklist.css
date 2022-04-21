@@ -16,11 +16,16 @@ img {
     height: 166px;
     width: 187px;
     border: none;
-    border-radius: 20pt;
-    box-shadow: 0 0 0 1pt grey;
+
     outline: none;
     overflow: visible;
     margin-right: 20px;
+}
+
+.brand {
+    height: auto;
+    width: auto;
+    border: none;
 }
 
 div{

@@ -9,6 +9,7 @@
 
     // Load all car images and assign ids to match database
     var folder = "img/cars/";
+    var makeFolder = "img/makes/";
 
     // Onclick() functionallity 
     function collection_update(item){
@@ -48,7 +49,7 @@
     function populate_makes(){
 
         make_list.forEach(make_id =>
-            $("body").append( "<div class=manufacture>"+make_id+"</div><div class='make' id='" + make_id.replace(/ /g, '-') + "'></div>" ));
+            $("body").append( "<div class=manufacture id='"+make_id+"Div'>"+make_id+"</div><div class='make' id='" + make_id.replace(/ /g, '-') + "'></div>" ));
 
         const xhttp = new XMLHttpRequest();
         
@@ -75,16 +76,16 @@
                     })
                     .filter(f => f); // Remove empty lines
                     
+                    console.log(filePaths)
                     filePaths.map(f => { // Create and put images to the DOM
 	                    if( f.match(/\.(png)$/)){
                             let imageFile = /[^/]*$/.exec(f)[0];
                             
                             const img = document.createElement('IMG');
-                            
                             make_ = imageFile.split('.')[0]
-                            console.log(make_)
-                            img.src = folder+imageFile;
-                            $(".manufacture").filter(":contains("+make_+")")[0].append(img);                        
+                            img.src = makeFolder+imageFile;
+                            img.classList.add("brand");
+                            $("#"+make_+"Div").append(img);
                                                
                     }});
                 }
