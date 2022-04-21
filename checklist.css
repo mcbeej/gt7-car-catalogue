@@ -35,9 +35,9 @@ div{
 }
 
 .manufacture {
-    display: inline-block;
+    display: flex;
     margin: 20px;
-    
+    align-items: center;
     width: 95%;
     padding: 0.5em;
     background-color: rgba(179, 169, 148, 0.463);

@@ -85,7 +85,7 @@
                             make_ = imageFile.split('.')[0]
                             img.src = makeFolder+imageFile;
                             img.classList.add("brand");
-                            $("#"+make_+"Div").append(img);
+                            $("#"+make_+"Div").prepend(img);
                                                
                     }});
                 }
