@@ -1,2 +1,4 @@
 img/makes/:
+Suzuki.png
+Tesla.png
 Toyota.png
