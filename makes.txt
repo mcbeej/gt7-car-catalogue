@@ -1,2 +1,2 @@
 img/makes/:
-Toyata.png
+Toyota.png

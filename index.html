@@ -48,10 +48,54 @@
     function populate_makes(){
 
         make_list.forEach(make_id =>
-            $("body").append( "<div class=manufacture>"+make_id+"</div><div class='make' id='" + make_id.replace(/ /g, '-') + "'></div>" )
-        );
-    }
+            $("body").append( "<div class=manufacture>"+make_id+"</div><div class='make' id='" + make_id.replace(/ /g, '-') + "'></div>" ));
 
+        const xhttp = new XMLHttpRequest();
+        
+        xhttp.onreadystatechange = function() {
+            
+            if (this.readyState == 4 && this.status == 200) {
+                const fileList = this.responseText.split('\n'); // Split by lines
+                let currentFolder = '';
+    
+                const filePaths = fileList
+                    .map(f => { // Build correct path for each file
+                        let filePath = '';
+    
+                        if (f) {
+                            if (f[0] === '.') {
+                                currentFolder = f.replace('.', '').replace(':', '/');
+                            }
+                            else if (f[f.length - 1] !== '/') {
+                                filePath = `${location.href}${currentFolder}${f}`;
+                            }
+                        }
+                
+                        return filePath;
+                    })
+                    .filter(f => f); // Remove empty lines
+                    
+                    filePaths.map(f => { // Create and put images to the DOM
+	                    if( f.match(/\.(png)$/)){
+                            let imageFile = /[^/]*$/.exec(f)[0];
+                            
+                            const img = document.createElement('IMG');
+                            
+                            make_ = imageFile.split('.')[0]
+                            console.log(make_)
+                            img.src = folder+imageFile;
+                            $(".manufacture").filter(":contains("+make_+")")[0].append(img);                        
+                                               
+                    }});
+                }
+            };
+        
+            xhttp.open("GET", "makes.txt", true);
+            xhttp.send();
+            
+        
+    }
+        
     function populate_images(){
 
         const xhttp = new XMLHttpRequest();
@@ -78,7 +122,7 @@
                         return filePath;
                     })
                     .filter(f => f); // Remove empty lines
-                    console.log(filePaths)
+                    
                     filePaths.map(f => { // Create and put images to the DOM
 	                    if( f.match(/\.(png)$/)){
                             let imageFile = /[^/]*$/.exec(f)[0];
