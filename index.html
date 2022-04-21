@@ -28,7 +28,7 @@
     var legend_, used_;
     var lcd_list = [];
     var ucd_list = [];
-    var make_list = ["Abarth","Alfa Romeo", "Alpine", "AMG", "Amuse", "Aston Martin", "Audi", "Autobianchi", "BAC", "BMW", "Bugatti", "Chaparral", "Chevrolet", "Chris Holstrom Concepts", "Citroen", "Daihatsu", "De Tomaso", "DMC", "Dodge", "DS AUTOMOBILES", "Eckert's Rod & Custom", "Ferrari", "Fiat","Ford", "Genesis", "Gran Turismo", "Greddy", "Honda", "Hyundai", "Infiniti", "Jaguar", "Jeep", "KTM", "Lamborghini", "Lancia", "Lexus", "Maserati", "Mazda", "McLaren", "Mercedes-Benz", "MINI", "Mitsubishi", "Nissan", "Pagani", "Peugeot", "Plymouth", "Pontiac", "Porsche", "Radical", "RE Amemiya", "Renault", "RUF", "Shelby", "Subaru", "Super Formula", "Suzuki", "Tesla", "Toyota", "TVR", "Volkswagen", "Wicked Fabrication", "Zagato"];
+    var make_list = ["Abarth","Alfa Romeo", "Alpine", "AMG", "Amuse", "Aston Martin", "Audi", "Autobianchi", "BAC", "BMW", "Bugatti", "Chaparral", "Chevrolet", "Chris Holstrom Concepts", "Citroen", "Daihatsu", "De Tomaso", "DMC", "Dodge", "DS AUTOMOBILES", "Eckerts Rod and Custom", "Ferrari", "Fiat","Ford", "Genesis", "Gran Turismo", "Greddy", "Honda", "Hyundai", "Infiniti", "Jaguar", "Jeep", "KTM", "Lamborghini", "Lancia", "Lexus", "Maserati", "Mazda", "McLaren", "Mercedes-Benz", "MINI", "Mitsubishi", "Nissan", "Pagani", "Peugeot", "Plymouth", "Pontiac", "Porsche", "Radical", "RE Amemiya", "Renault", "RUF", "Shelby", "Subaru", "Super Formula", "Suzuki", "Tesla", "Toyota", "TVR", "Volkswagen", "Wicked Fabrication", "Zagato"];
 
     $.getJSON('https://ddm999.github.io/gt7info/data.json', function(res){
         legend_ = res["legend"]["cars"];
@@ -48,7 +48,7 @@
     function populate_makes(){
 
         make_list.forEach(make_id =>
-            $("body").append( "<div class=manufacture>"+make_id+"</div><div class='make' id='" + make_id.replace(' ', '-') + "'></div>" )
+            $("body").append( "<div class=manufacture>"+make_id+"</div><div class='make' id='" + make_id.replace(/ /g, '-') + "'></div>" )
         );
     }
 
@@ -81,7 +81,7 @@
                     filePaths.map(f => { // Create and put images to the DOM
 	                    if( f.match(/\.(png)$/)){
                             let imageFile = /[^/]*$/.exec(f)[0];
-                            let make_ = imageFile.split('.')[0].replace(' ', '-');
+                            let make_ = imageFile.split('.')[0].replace(/ /g, '-');
                             let id_ = imageFile.split('.')[2];
                             let tag_ = "";
 
