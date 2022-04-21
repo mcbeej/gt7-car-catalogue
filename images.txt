@@ -1,4 +1,21 @@
 img/cars/:
+<<<<<<< HEAD
+=======
+AMG.01.3388.png
+AMG.02.3397.png
+AMG.03.1507.png
+AMG.04.1797.png
+AMG.05.2055.png
+AMG.06.2170.png
+AMG.07.2076.png
+AMG.08.2149.png
+AMG.09.3458.png
+AMG.10.3224.png
+AMG.11.3416.png
+AMG.12.3485.png
+AMG.13.3192.png
+AMG.14.3210.png
+>>>>>>> 995c59dd09df20124b759c62481113a687a40d47
 Abarth.01.1932.png
 Abarth.02.3438.png
 Abarth.03.1973.png
