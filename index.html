@@ -80,12 +80,11 @@
 
                     filePaths.map(f => { // Create and put images to the DOM
 	                    if( f.match(/\.(png)$/)){
-                            console.log(f)
                             let imageFile = /[^/]*$/.exec(f)[0];
                             let make_ = imageFile.split('.')[0].replace(/ /g, '-');
                             let id_ = imageFile.split('.')[2];
-                            let tag_ = "";
-
+                            let tag_ = "", price_ = "", state_ = "";
+                            
                             const img = document.createElement('IMG');
                             if (id_ in localStorage){
                                 img.classList.add("Checked");
@@ -101,10 +100,45 @@
                             if ( lcd_list.includes(String(id_))){
                                 tag_ = "<div class='Legend'></div>";
                                 $("#"+id_).append(tag_)
+
+                                legend_.find( (el) => {
+                                    if (el.carid == id_){
+                                        price_ = "<div class='Price'>$"+el.credits.toLocaleString("en-US") +"</div>";
+                                        $("#"+id_).append(price_);
+
+                                        if(el.state == "limited"){
+                                            state_ = "<div class='Limited'></div>";
+                                        $("#"+id_).append(state_);
+                                        }
+
+                                        if(el.state == "soldout"){
+                                            state_ = "<div class='Soldout'></div>";
+                                        $("#"+id_).append(state_);
+                                        }
+                                    }
+                                });
                             }
                             if ( ucd_list.includes( String(id_))){
-                                tag_ = "<div class='Used'></div>"
-                                $("#"+id_).append(tag_)
+                                tag_ = "<div class='Used'></div>";
+                                $("#"+id_).append(tag_);
+
+                                used_.find( (el) => {
+                                    if (el.carid == id_){
+                                        price_ = "<div class='Price'>$"+el.credits.toLocaleString("en-US") +"</div>";
+                                        $("#"+id_).append(price_);
+
+                                        if(el.state == "limited"){
+                                            state_ = "<div class='Limited'></div>";
+                                        $("#"+id_).append(state_);
+                                        }
+
+                                        if(el.state == "soldout"){
+                                            state_ = "<div class='Soldout'></div>";
+                                        $("#"+id_).append(state_);
+                                        }
+                                    }
+                                    
+                                });
                             }
                         
                             
@@ -128,6 +162,13 @@
 
         <div>Used Car Dealership
             <div class="Usedtag"></div>
+        </div>
+
+        <div>Limited
+            <div class="Limitedtag"></div>
+        </div>
+        <div>Sold Out
+            <div class="Soldouttag"></div>
         </div>
     </div>
 </body>

@@ -81,6 +81,38 @@ div{
     left: 40px;
 }
 
+.Price {
+    position: relative;
+    float: left;
+    padding: 0.2em;
+    top: -38px;
+    left: 9px;
+}
+
+.Limited {
+    position: relative;
+    float: left;
+    width: 10px;
+    height: 18px;
+	transform: skew(-20deg);
+    border: 1px solid rgb(134, 39, 7);
+    background-color: rgb(114, 46, 23);
+    top: -166px;
+    left: -10px;
+}
+
+.Soldout {
+    position: relative;
+    float: left;
+    width: 10px;
+    height: 18px;
+	transform: skew(-20deg);
+    border: 1px solid rgb(17, 4, 0);
+    background-color: rgb(3, 1, 0);
+    top: -166px;
+    left: -10px;
+}
+
 .Legendtag {
     position: relative;
     margin-left: 1em;
@@ -105,4 +137,30 @@ div{
     border: 1px solid rgb(43, 58, 173);
     background-color: rgb(50, 83, 219);
 
+}
+
+.Limitedtag {
+    position: relative;
+    margin-right: 1em;
+    margin-left: 1em;
+    float: left;
+    width: 7px;
+    height: 13px;
+	transform: skew(-20deg);
+    border: 1px solid rgb(134, 39, 7);
+    background-color: rgb(114, 46, 23);
+    
+}
+
+.Soldouttag {
+    position: relative;
+    margin-right: 1em;
+    margin-left: 1em;
+    float: left;
+    width: 7px;
+    height: 13px;
+	transform: skew(-20deg);
+    border: 1px solid rgb(17, 4, 0);
+    background-color: rgb(3, 1, 0);
+    
 }
