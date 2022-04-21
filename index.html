@@ -1,19 +1,94 @@
-<img id="3457" src="img/cars/3457.png">
-<\img>
+<head>
+    <link rel="stylesheet" href="checklist.css">
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-var folder = "img/cars";
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
 
-$.ajax({
-    url : folder,
-    success: function (data) {
-        $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                $("body").append( "<img id='"+val +"' src='"+ folder + val +"'>" );
-            } 
+
+    // Load all car images and assign ids to match database
+    var folder = "img/cars/";
+
+    // Onclick() functionallity 
+    function collection_update(item){
+        let id_ = $(item).attr("id");
+        let el = document.getElementById(id_).childNodes[0]
+        el.classList.toggle("Checked");
+
+        if (el.classList.contains("Checked")){
+            localStorage.setItem(id_, 'Checked');
+        }
+        else {
+            localStorage.removeItem(id_);
+        }
+    }
+
+    // JSON data from https://ddm999.github.io/gt7info/data.json
+    var legend_, used_;
+    var lcd_list = [];
+    var ucd_list = [];
+    var make_list = ["Abarth","Alfa Romeo", "Alpine"];
+
+    $.getJSON('https://ddm999.github.io/gt7info/data.json', function(res){
+        legend_ = res["legend"]["cars"];
+        used_ = res["used"]["cars"];
+
+        for (l_ of legend_){
+            lcd_list.push(l_.carid)
+        }  
+
+        for (u_ of used_){
+            ucd_list.push(u_.carid)
+        } 
+        populate_makes();
+        populate_images();
+    })
+
+    function populate_makes(){
+
+        make_list.forEach(make_id =>
+            $("body").append( "<div class=manufacture>"+make_id+"</div><div class='make' id='" + make_id.replace(' ', '-') + "'></div>" )
+        );
+    }
+
+
+    function populate_images(){
+        
+        $.ajax({
+            url : folder,
+            success: function (data) {
+                $(data).find("a").attr("href", function (i, val) {
+                    if( val.match(/\.(png)$/) ) { 
+                        let make_ = val.split('.')[0].replace('%20', '-');
+                        let id_ = val.split('.')[2];
+                        let tag_ = "";
+                        
+                        let img_;
+
+                        if (id_ in localStorage){
+                            img_ = "<img class=Checked src='"+ folder + val +"'>";
+                        }
+                        else{
+                            img_ = "<img src='"+ folder + val +"'>";
+                        }
+
+                        $("#"+make_).append( 
+                            "<div class='car' id='" + id_ + "' onclick=collection_update(this)>"+img_+"</div>" 
+                        );
+
+                        if ( lcd_list.includes(String(id_))){
+                            tag_ = "<div class='Legend'></div>";
+                            $("#"+id_).append(tag_)
+                        }
+                        if ( ucd_list.includes( String(id_))){
+                            tag_ = "<div class='Used'></div>"
+                            $("#"+id_).append(tag_)
+                        }
+                    } 
+                });
+            }
         });
     }
-});
-</script>
+    
+    </script>
+</head>

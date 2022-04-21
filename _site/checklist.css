@@ -1,0 +1,68 @@
+img {
+    height: 166px;
+    width: 187px;
+    border: none;
+    border-radius: 20pt;
+    box-shadow: 0 0 0 1pt grey;
+    outline: none;
+    overflow: visible;
+    margin-right: 20px;
+}
+
+div{
+    display: inline-block;
+   
+    object-fit: cover;
+}
+
+.manufacture {
+    display: inline-block;
+    margin: 20px;
+    
+    width: 95%;
+    padding: 0.5em;
+    background-color: rgba(179, 169, 148, 0.463);
+}
+
+.make {
+    display: inline-block;
+    width: 100%;
+}
+
+.car {
+    display: inline-block;
+    width: 190px;
+    margin-top: 2em;
+    margin-left: 1em;
+    display: inline-block;
+}
+
+
+.Checked {
+    outline: 3px solid rgb(43, 62, 120);
+    opacity: 0.5;
+}
+
+.Legend {
+    position: relative;
+    float: left;
+    width: 40px;
+    height: 20px;
+	transform: skew(-20deg);
+    border: 1px solid rgb(170, 168, 44);
+    background-color: rgb(200, 197, 28);
+    top: -166px;
+    left: 40px;
+}
+
+.Used {
+    position: relative;
+    float: left;
+    width: 40px;
+    height: 20px;
+	transform: skew(-20deg);
+    border: 1px solid rgb(43, 58, 173);
+    background-color: rgb(50, 83, 219);
+    top: -166px;
+    left: 40px;
+}
