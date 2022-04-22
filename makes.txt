@@ -1,4 +1,8 @@
 img/makes/:
+RE Amemiya.png
+Renault.png
+Shelby.png
+Subaru.png
 Suzuki.png
 Tesla.png
 Toyota.png
