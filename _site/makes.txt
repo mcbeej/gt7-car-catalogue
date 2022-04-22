@@ -1,4 +1,6 @@
 img/makes/:
+Audi.png
+Autobianchi.png
 BMW.png
 Bugatti.png
 Chevrolet.png
@@ -10,6 +12,9 @@ De Tomaso.png
 Dodge.png
 Ford.png
 Genesis.png
+Greddy.png
+Honda.png
+Hyundai.png
 Infiniti.png
 Jaguar.png
 Jeep.png
