@@ -1,6 +1,10 @@
+* {
+    font-size: 1em;
+}
+
 .Header {
         position: sticky;
-        width: 100%;
+        width: 98%;
         top: 0;  
         padding: 1em;
         border-bottom: 1px solid rgba(76, 69, 53, 0.463);
@@ -20,11 +24,15 @@ body {
 .Footer {
     
     position: fixed;
-    bottom: 1em;
-    right: 1em;
+    bottom: 0.5em;
+    right: 0em;
     z-index: 10;
 }
 
+iframe {
+    right: -50px;
+    float: right;
+}
 
 img {
     height: 166px;
@@ -44,9 +52,6 @@ img {
     border: none;
 }
 
-.completed {
-    background-color: #04724D;
-}
 
 div{
     display: inline-block;
@@ -55,8 +60,15 @@ div{
 }
 
 span {
-    width: 200px;
-    height: 200px;
+    height: 20px;
+    width: auto;
+    margin-right: 1em;
+    margin-left: auto;
+}
+
+.counter-box {
+    margin-right: 1em;
+    margin-left: auto;
 }
 
 .manufacture {
@@ -204,5 +216,9 @@ span {
     height: 20px;
     width: auto;
     margin-right: 1em;
-    margin-left: auto;
+    margin-left: 1em;
+}
+
+.completed {
+    background-color: #04724D;
 }

@@ -14,17 +14,37 @@
 
     // Onclick() functionallity 
     function collection_update(item){
+        
+        let make_ = /[^/]*$/.exec(item.firstChild.src)[0].split('.')[0].replace(/%20/g, '-');
         let id_ = $(item).attr("id");
         let el = document.getElementById(id_).childNodes[0]
+
+        // Check toggle functionality
         el.classList.toggle("Checked");
+        let count = Number($("#"+make_+"-counter")[0].innerText);      
 
         if (el.classList.contains("Checked")){
             localStorage.setItem(id_, 'Checked');
+            // Update counter                        
+            count += 1;
+            $("#"+make_+"-counter")[0].innerText = count;
+        
+            // Check for completeion status
+            let total = $("#"+make_+"-total")[0].innerText
+            if (count == total){
+                $("#"+make_+"Div")[0].classList.toggle("completed");
+            }
         }
         else {
             localStorage.removeItem(id_);
+            // Update counter                        
+            count -= 1;
+            $("#"+make_+"-counter")[0].innerText = count;
+
+            $("#"+make_+"Div")[0].classList.remove("completed");
         }
     }
+
 
     // JSON data from https://ddm999.github.io/gt7info/data.json
     var legend_, used_;
@@ -62,6 +82,24 @@
             })
 
             $("#"+make_id_proper).toggle(localStorage.getItem(make_id_proper+'visible') === 'true');
+
+            const span_div = document.createElement('div');
+            span_div.id = (make_id_proper+"-counter-box");
+            span_div.classList.add("counter-box");
+
+            const span_check = document.createElement('span');
+            const span_divide = document.createElement('span');
+            const span_total = document.createElement('span');
+            span_check.id = make_id_proper+"-counter";
+            span_total.id = make_id_proper+"-total";
+            span_check.innerText = 0;
+            span_divide.innerText = "/"
+            span_total.innerText = 0;
+
+            $("#"+make_id_proper+"Div").append(span_div);
+            $("#"+make_id_proper+"-counter-box").append(span_check);
+            $("#"+make_id_proper+"-counter-box").append(span_divide);
+            $("#"+make_id_proper+"-counter-box").append(span_total);
         });
 
         const xhttp = new XMLHttpRequest();
@@ -141,6 +179,7 @@
                     .filter(f => f); // Remove empty lines
                     
                     filePaths.map(f => { // Create and put images to the DOM
+
 	                    if( f.match(/\.(png)$/)){
                             let imageFile = /[^/]*$/.exec(f)[0];
                             let make_ = imageFile.split('.')[0].replace(/ /g, '-');
@@ -148,19 +187,42 @@
                             let tag_ = "", price_ = "", state_ = "";
                             
                             const img = document.createElement('IMG');
+                             // Add total number of cars for make
+                            let total = Number($("#"+make_+"-total")[0].innerText);                           
+                            total += 1;
+                            $("#"+make_+"-total")[0].innerText = total;
+
+                            
+                            // Check for saved state on checklist
+                            
+
+                            let count = Number($("#"+make_+"-counter")[0].innerText)
                             if (id_ in localStorage){
                                 img.classList.add("Checked");
+                                ;      
+                                count += 1;
+                                $("#"+make_+"-counter")[0].innerText = count;
+
+                                
+                               
                             }
                             
                             $("#"+make_).append( 
                             "<div class='car' id='" + id_ + "' onclick=collection_update(this)></div>" 
                             );
 
-                            
+                            if (count == total){                              
+                                $("#"+make_+"Div")[0].classList.toggle("completed");
+                            }
+                            else {
+                                $("#"+make_+"Div")[0].classList.remove("completed")
+                            }
 
+                            // Start loading images
                             img.src = folder+imageFile;
                             $("#"+id_).append(img);
 
+                            // Externally link to grab price history
                             $("#"+id_).hover(
                                 function(){
                                     str = "https://ddm999.github.io/gt7info/cars/prices_" + id_ +".png"
@@ -263,6 +325,6 @@
     </div>
     
     <div class="Footer">
-        <iframe  name="price_frame" height="480px" width="640px" frameBorder="0"></iframe>
+        <iframe  name="price_frame" height="400px" width="600px" frameBorder="0"></iframe>
     </div>
 </body>
