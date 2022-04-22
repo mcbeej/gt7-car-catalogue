@@ -1,5 +1,8 @@
 img/makes/:
+Pontiac.png
+Porsche.png
 RE Amemiya.png
+Radical.png
 Renault.png
 Shelby.png
 Subaru.png
