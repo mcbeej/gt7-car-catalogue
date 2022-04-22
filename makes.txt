@@ -1,23 +1,37 @@
 img/makes/:
+AMG.png
+Abarth.png
+Alfa Romeo.png
+Alpine.png
+Amuse.png
+Aston Martin.png
 Audi.png
 Autobianchi.png
+BAC.png
 BMW.png
 Bugatti.png
+Chaparral.png
 Chevrolet.png
 Chris Holstrom Concepts.png
 Citroen.png
+DMC.png
 DS AUTOMOBILES.png
 Daihatsu.png
 De Tomaso.png
 Dodge.png
+Eckerts Rod and Custom.png
+Ferrari.png
+Fiat.png
 Ford.png
 Genesis.png
+Gran Turismo.png
 Greddy.png
 Honda.png
 Hyundai.png
 Infiniti.png
 Jaguar.png
 Jeep.png
+KTM.png
 Lamborghini.png
 Lancia.png
 MINI.png
@@ -25,16 +39,24 @@ Maserati.png
 Mazda.png
 McLaren.png
 Mercedes-Benz.png
+Mitsubishi.png
 Nissan.png
 Pagani.png
 Peugeot.png
+Plymouth.png
 Pontiac.png
 Porsche.png
 RE Amemiya.png
+RUF.png
 Radical.png
 Renault.png
 Shelby.png
 Subaru.png
+Super Formula.png
 Suzuki.png
+TVR.png
 Tesla.png
 Toyota.png
+Volkswagen.png
+Wicked Fabrication.png
+Zagato.png
