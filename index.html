@@ -10,6 +10,7 @@
     // Load all car images and assign ids to match database
     var folder = "img/cars/";
     var makeFolder = "img/makes/";
+    var srcFolder = "img/src/";
 
     // Onclick() functionallity 
     function collection_update(item){
@@ -48,8 +49,20 @@
 
     function populate_makes(){
 
-        make_list.forEach(make_id =>
-            $("body").append( "<div class=manufacture id='"+make_id.replace(/ /g, '-')+"Div'>"+make_id+"</div><div class='make' id='" + make_id.replace(/ /g, '-') + "'></div>" ));
+        make_list.forEach(make_id => {
+
+            let make_id_proper = make_id.replace(/ /g, '-');
+
+            $("body").append( "<div class=manufacture id='"+make_id_proper+"Div'>"+make_id+"</div><div class='make' id='" + make_id_proper + "'></div>" )
+            
+            $("#"+make_id_proper+"Div").click( function () {
+                $("#"+make_id_proper).slideToggle( function(){
+                    localStorage.setItem(make_id_proper+'visible', $(this).is(":visible"));
+                });
+            })
+
+            $("#"+make_id_proper).toggle(localStorage.getItem(make_id_proper+'visible') === 'true');
+        });
 
         const xhttp = new XMLHttpRequest();
         
@@ -83,16 +96,19 @@
                             const img = document.createElement('IMG');
                             make_ = imageFile.split('.')[0].replace(/ /g, '-');
                             img.src = makeFolder+imageFile;
-                            console.log(img.src, makeFolder, imageFile);
                             img.classList.add("brand");
                             $("#"+make_+"Div").prepend(img);
-                                               
+                            
+                            const svgImg = document.createElement('IMG');
+                            svgImg.src = srcFolder+"down-arrow.svg";
+                            svgImg.classList.add("svg")
+                            $("#"+make_+"Div").append(svgImg);
                     }});
                 }
             };
         
-            xhttp.open("GET", "makes.txt", true);
-            xhttp.send();
+        xhttp.open("GET", "makes.txt", true);
+        xhttp.send();
             
         
     }
@@ -218,8 +234,8 @@
                 }
             };
         
-            xhttp.open("GET", "images.txt", true);
-            xhttp.send();
+        xhttp.open("GET", "images.txt", true);
+        xhttp.send();
         }
 
         

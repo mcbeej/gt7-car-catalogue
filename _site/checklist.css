@@ -44,6 +44,10 @@ img {
     border: none;
 }
 
+.completed {
+    background-color: #04724D;
+}
+
 div{
     display: inline-block;
    
@@ -61,20 +65,25 @@ span {
     align-items: center;
     width: 95%;
     padding: 0.5em;
-    background-color: rgba(179, 169, 148, 0.463);
+    background-color: #83775D;
 }
 
 .make {
     display: inline-block;
-    width: 100%;
+    margin: 20px;
+    padding-bottom: 30px;
+    width: 95%;
+    background-color: #3E3E3D;
 }
 
 .car {
     display: inline-block;
     width: 190px;
+    height: 166px;
     margin-top: 2em;
     margin-left: 1em;
-    display: inline-block;
+
+    box-shadow: 3px 3px 5px 6px #242423;
 }
 
 
@@ -101,8 +110,8 @@ span {
     width: 40px;
     height: 20px;
 	transform: skew(-20deg);
-    border: 1px solid rgb(43, 58, 173);
-    background-color: rgb(50, 83, 219);
+    border: 1px solid #2F52E0;
+    background-color: #2F52E0;
     top: -166px;
     left: 40px;
 }
@@ -121,8 +130,8 @@ span {
     width: 10px;
     height: 18px;
 	transform: skew(-20deg);
-    border: 1px solid rgb(134, 39, 7);
-    background-color: rgb(114, 46, 23);
+    border: 1px solid #B6465F;
+    background-color: #B6465F;
     top: -166px;
     left: -10px;
 }
@@ -160,8 +169,8 @@ span {
     width: 30px;
     height: 15px;
 	transform: skew(-20deg);
-    border: 1px solid rgb(43, 58, 173);
-    background-color: rgb(50, 83, 219);
+    border: 1px solid #2F52E0;
+    background-color: #2F52E0;
 
 }
 
@@ -173,8 +182,8 @@ span {
     width: 7px;
     height: 13px;
 	transform: skew(-20deg);
-    border: 1px solid rgb(134, 39, 7);
-    background-color: rgb(114, 46, 23);
+    border: 1px solid #B6465F;
+    background-color: #B6465F;
     
 }
 
@@ -189,4 +198,11 @@ span {
     border: 1px solid rgb(17, 4, 0);
     background-color: rgb(3, 1, 0);
     
+}
+
+.svg {
+    height: 20px;
+    width: auto;
+    margin-right: 1em;
+    margin-left: auto;
 }
