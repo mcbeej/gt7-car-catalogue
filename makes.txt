@@ -1,4 +1,15 @@
 img/makes/:
+BMW.png
+Bugatti.png
+Chevrolet.png
+Chris Holstrom Concepts.png
+Citroen.png
+DS AUTOMOBILES.png
+Daihatsu.png
+De Tomaso.png
+Dodge.png
+Ford.png
+Genesis.png
 Infiniti.png
 Jaguar.png
 Jeep.png
@@ -9,6 +20,7 @@ Maserati.png
 Mazda.png
 McLaren.png
 Mercedes-Benz.png
+Nissan.png
 Pagani.png
 Peugeot.png
 Pontiac.png
