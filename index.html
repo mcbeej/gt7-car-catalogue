@@ -148,9 +148,20 @@
                                 function(){
                                     str = "https://ddm999.github.io/gt7info/cars/prices_" + id_ +".png"
                                     
-                                    $("iframe[name='price_frame']")[0].src = str;
                                     
-
+                                    $("iframe[name='price_frame']").load(str, function (e, status, xhr) {
+                                        var iframe = $("iframe[name='price_frame']")[0];
+                                        
+                                        // Check if data exists for car id
+                                        if ( status == "error") {
+                                            // Do nothing                     
+                                            
+                                        } else {
+                                            // On success
+                                            iframe.src = str;
+                                        }
+                                    });
+                                                                    
                                 }, function(){
                                     $("iframe[name='price_frame']")[0].src = "";
                                     
@@ -229,6 +240,8 @@
         </div>
         <div>Sold Out
             <div class="Soldouttag"></div>
+        </div>
+        <div class="EndHead">All data provided by <a href="https://ddm999.github.io/gt7info/">https://ddm999.github.io/gt7info/</a>
         </div>
     </div>
     
