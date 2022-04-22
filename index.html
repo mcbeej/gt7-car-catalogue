@@ -49,7 +49,7 @@
     function populate_makes(){
 
         make_list.forEach(make_id =>
-            $("body").append( "<div class=manufacture id='"+make_id+"Div'>"+make_id+"</div><div class='make' id='" + make_id.replace(/ /g, '-') + "'></div>" ));
+            $("body").append( "<div class=manufacture id='"+make_id.replace(/ /g, '-')+"Div'>"+make_id+"</div><div class='make' id='" + make_id.replace(/ /g, '-') + "'></div>" ));
 
         const xhttp = new XMLHttpRequest();
         
@@ -81,8 +81,9 @@
                             let imageFile = /[^/]*$/.exec(f)[0];
                             
                             const img = document.createElement('IMG');
-                            make_ = imageFile.split('.')[0]
+                            make_ = imageFile.split('.')[0].replace(/ /g, '-');
                             img.src = makeFolder+imageFile;
+                            console.log(img.src, makeFolder, imageFile);
                             img.classList.add("brand");
                             $("#"+make_+"Div").prepend(img);
                                                

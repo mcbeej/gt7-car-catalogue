@@ -37,6 +37,8 @@ img {
 }
 
 .brand {
+    max-height: 60px;
+    max-width: 100px;
     height: auto;
     width: auto;
     border: none;
