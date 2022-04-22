@@ -1,268 +1,77 @@
-<head>
-    
-    <link rel="stylesheet" href="checklist.css">
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Work | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Work" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/gt7checklist/" />
+<meta property="og:url" content="http://localhost:4000/gt7checklist/" />
+<meta property="og:site_name" content="Work" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Work" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Work","name":"Work","url":"http://localhost:4000/gt7checklist/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/gt7checklist/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/gt7checklist/feed.xml" title="Work" /></head>
+<body><header class="site-header" role="banner">
 
+  <div class="wrapper"><a class="site-title" rel="author" href="/gt7checklist/">Work</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
+        <div class="trigger"><a class="page-link" href="/gt7checklist/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home">
+<h2 class="post-list-heading">Posts</h2>
+    <ul class="post-list"><li><span class="post-meta">Apr 20, 2022</span>
+        <h3>
+          <a class="post-link" href="/gt7checklist/jekyll/update/2022/04/20/welcome-to-jekyll.html">
+            Welcome to Jekyll!
+          </a>
+        </h3></li></ul>
 
+    <p class="rss-subscribe">subscribe <a href="/gt7checklist/feed.xml">via RSS</a></p></div>
 
-    // Load all car images and assign ids to match database
-    var folder = "img/cars/";
-    var makeFolder = "img/makes/";
-    var srcFolder = "img/src/";
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/gt7checklist/"></data>
 
-    // Onclick() functionallity 
-    function collection_update(item){
-        let id_ = $(item).attr("id");
-        let el = document.getElementById(id_).childNodes[0]
-        el.classList.toggle("Checked");
+  <div class="wrapper">
 
-        if (el.classList.contains("Checked")){
-            localStorage.setItem(id_, 'Checked');
-        }
-        else {
-            localStorage.removeItem(id_);
-        }
-    }
+    <h2 class="footer-heading">Work</h2>
 
-    // JSON data from https://ddm999.github.io/gt7info/data.json
-    var legend_, used_;
-    var lcd_list = [];
-    var ucd_list = [];
-    var make_list = ["Abarth","Alfa Romeo", "Alpine", "AMG", "Amuse", "Aston Martin", "Audi", "Autobianchi", "BAC", "BMW", "Bugatti", "Chaparral", "Chevrolet", "Chris Holstrom Concepts", "Citroen", "Daihatsu", "De Tomaso", "DMC", "Dodge", "DS AUTOMOBILES", "Eckerts Rod and Custom", "Ferrari", "Fiat","Ford", "Genesis", "Gran Turismo", "Greddy", "Honda", "Hyundai", "Infiniti", "Jaguar", "Jeep", "KTM", "Lamborghini", "Lancia", "Lexus", "Maserati", "Mazda", "McLaren", "Mercedes-Benz", "MINI", "Mitsubishi", "Nissan", "Pagani", "Peugeot", "Plymouth", "Pontiac", "Porsche", "Radical", "RE Amemiya", "Renault", "RUF", "Shelby", "Subaru", "Super Formula", "Suzuki", "Tesla", "Toyota", "TVR", "Volkswagen", "Wicked Fabrication", "Zagato"];
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Work</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
 
-    $.getJSON('https://ddm999.github.io/gt7info/data.json', function(res){
-        legend_ = res["legend"]["cars"];
-        used_ = res["used"]["cars"];
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/gt7checklist/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/gt7checklist/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
 
-        for (l_ of legend_){
-            lcd_list.push(l_.carid)
-        }  
-
-        for (u_ of used_){
-            ucd_list.push(u_.carid)
-        } 
-        populate_makes();
-        populate_images();
-    })
-
-    function populate_makes(){
-
-        make_list.forEach(make_id => {
-
-            let make_id_proper = make_id.replace(/ /g, '-');
-
-            $("body").append( "<div class=manufacture id='"+make_id_proper+"Div'>"+make_id+"</div><div class='make' id='" + make_id_proper + "'></div>" )
-            
-            $("#"+make_id_proper+"Div").click( function () {
-                $("#"+make_id_proper).slideToggle( function(){
-                    localStorage.setItem(make_id_proper+'visible', $(this).is(":visible"));
-                });
-            })
-
-            $("#"+make_id_proper).toggle(localStorage.getItem(make_id_proper+'visible') === 'true');
-        });
-
-        const xhttp = new XMLHttpRequest();
-        
-        xhttp.onreadystatechange = function() {
-            
-            if (this.readyState == 4 && this.status == 200) {
-                const fileList = this.responseText.split('\n'); // Split by lines
-                let currentFolder = '';
-    
-                const filePaths = fileList
-                    .map(f => { // Build correct path for each file
-                        let filePath = '';
-    
-                        if (f) {
-                            if (f[0] === '.') {
-                                currentFolder = f.replace('.', '').replace(':', '/');
-                            }
-                            else if (f[f.length - 1] !== '/') {
-                                filePath = `${location.href}${currentFolder}${f}`;
-                            }
-                        }
-                
-                        return filePath;
-                    })
-                    .filter(f => f); // Remove empty lines
-                    
-                    filePaths.map(f => { // Create and put images to the DOM
-	                    if( f.match(/\.(png)$/)){
-                            let imageFile = /[^/]*$/.exec(f)[0];
-                            
-                            const img = document.createElement('IMG');
-                            make_ = imageFile.split('.')[0].replace(/ /g, '-');
-                            img.src = makeFolder+imageFile;
-                            img.classList.add("brand");
-                            $("#"+make_+"Div").prepend(img);
-                            
-                            const svgImg = document.createElement('IMG');
-                            svgImg.src = srcFolder+"down-arrow.svg";
-                            svgImg.classList.add("svg")
-                            $("#"+make_+"Div").append(svgImg);
-                    }});
-                }
-            };
-        
-        xhttp.open("GET", "makes.txt", true);
-        xhttp.send();
-            
-        
-    }
-        
-    function populate_images(){
-
-        const xhttp = new XMLHttpRequest();
-        
-        xhttp.onreadystatechange = function() {
-            
-            if (this.readyState == 4 && this.status == 200) {
-                const fileList = this.responseText.split('\n'); // Split by lines
-                let currentFolder = '';
-    
-                const filePaths = fileList
-                    .map(f => { // Build correct path for each file
-                        let filePath = '';
-    
-                        if (f) {
-                            if (f[0] === '.') {
-                                currentFolder = f.replace('.', '').replace(':', '/');
-                            }
-                            else if (f[f.length - 1] !== '/') {
-                                filePath = `${location.href}${currentFolder}${f}`;
-                            }
-                        }
-                
-                        return filePath;
-                    })
-                    .filter(f => f); // Remove empty lines
-                    
-                    filePaths.map(f => { // Create and put images to the DOM
-	                    if( f.match(/\.(png)$/)){
-                            let imageFile = /[^/]*$/.exec(f)[0];
-                            let make_ = imageFile.split('.')[0].replace(/ /g, '-');
-                            let id_ = imageFile.split('.')[2];
-                            let tag_ = "", price_ = "", state_ = "";
-                            
-                            const img = document.createElement('IMG');
-                            if (id_ in localStorage){
-                                img.classList.add("Checked");
-                            }
-                            
-                            $("#"+make_).append( 
-                            "<div class='car' id='" + id_ + "' onclick=collection_update(this)></div>" 
-                            );
-
-                            
-
-                            img.src = folder+imageFile;
-                            $("#"+id_).append(img);
-
-                            $("#"+id_).hover(
-                                function(){
-                                    str = "https://ddm999.github.io/gt7info/cars/prices_" + id_ +".png"
-                                    
-                                    
-                                    $("iframe[name='price_frame']").load(str, function (e, status, xhr) {
-                                        var iframe = $("iframe[name='price_frame']")[0];
-                                        
-                                        // Check if data exists for car id
-                                        if ( status == "error") {
-                                            // Do nothing                     
-                                            
-                                        } else {
-                                            // On success
-                                            iframe.src = str;
-                                        }
-                                    });
-                                                                    
-                                }, function(){
-                                    $("iframe[name='price_frame']")[0].src = "";
-                                    
-                                }
-                            );
-
-                            if ( lcd_list.includes(String(id_))){
-                                tag_ = "<div class='Legend'></div>";
-                                $("#"+id_).append(tag_)
-
-                                legend_.find( (el) => {
-                                    if (el.carid == id_){
-                                        price_ = "<div class='Price'>$"+el.credits.toLocaleString("en-US") +"</div>";
-                                        $("#"+id_).append(price_);
-
-                                        if(el.state == "limited"){
-                                            state_ = "<div class='Limited'></div>";
-                                        $("#"+id_).append(state_);
-                                        }
-
-                                        if(el.state == "soldout"){
-                                            state_ = "<div class='Soldout'></div>";
-                                        $("#"+id_).append(state_);
-                                        }
-                                    }
-                                });
-                            }
-                            if ( ucd_list.includes( String(id_))){
-                                tag_ = "<div class='Used'></div>";
-                                $("#"+id_).append(tag_);
-
-                                used_.find( (el) => {
-                                    if (el.carid == id_){
-                                        price_ = "<div class='Price'>$"+el.credits.toLocaleString("en-US") +"</div>";
-                                        $("#"+id_).append(price_);
-
-                                        if(el.state == "limited"){
-                                            state_ = "<div class='Limited'></div>";
-                                        $("#"+id_).append(state_);
-                                        }
-
-                                        if(el.state == "soldout"){
-                                            state_ = "<div class='Soldout'></div>";
-                                        $("#"+id_).append(state_);
-                                        }
-                                    }
-                                    
-                                });
-                            }
-                        
-                            
-                    }});
-                }
-            };
-        
-        xhttp.open("GET", "images.txt", true);
-        xhttp.send();
-        }
-
-        
-    
-    </script>
-</head>
-<body>
-    <div class="Header">
-        <div>Legendary Car Dealership
-            <div class="Legendtag"></div>
-        </div>
-
-        <div>Used Car Dealership
-            <div class="Usedtag"></div>
-        </div>
-
-        <div>Limited
-            <div class="Limitedtag"></div>
-        </div>
-        <div>Sold Out
-            <div class="Soldouttag"></div>
-        </div>
-        <div class="EndHead">All data provided by <a href="https://ddm999.github.io/gt7info/">https://ddm999.github.io/gt7info/</a>
-        </div>
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
     </div>
-    
-    <div class="Footer">
-        <iframe  name="price_frame" height="480px" width="640px" frameBorder="0"></iframe>
-    </div>
+
+  </div>
+
+</footer>
 </body>
+
+</html>
