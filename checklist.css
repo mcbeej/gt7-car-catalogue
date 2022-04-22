@@ -12,6 +12,15 @@ body {
     background-color: #242423;
 }
 
+.Footer {
+    
+    position: fixed;
+    bottom: 0.2em;
+    right: 0.2em;
+    z-index: 10;
+}
+
+
 img {
     height: 166px;
     width: 187px;
@@ -32,6 +41,11 @@ div{
     display: inline-block;
    
     object-fit: cover;
+}
+
+span {
+    width: 200px;
+    height: 200px;
 }
 
 .manufacture {

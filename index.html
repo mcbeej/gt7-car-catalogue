@@ -76,7 +76,6 @@
                     })
                     .filter(f => f); // Remove empty lines
                     
-                    console.log(filePaths)
                     filePaths.map(f => { // Create and put images to the DOM
 	                    if( f.match(/\.(png)$/)){
                             let imageFile = /[^/]*$/.exec(f)[0];
@@ -140,8 +139,23 @@
                             "<div class='car' id='" + id_ + "' onclick=collection_update(this)></div>" 
                             );
 
+                            
+
                             img.src = folder+imageFile;
                             $("#"+id_).append(img);
+
+                            $("#"+id_).hover(
+                                function(){
+                                    str = "https://ddm999.github.io/gt7info/cars/prices_" + id_ +".png"
+                                    
+                                    $("iframe[name='price_frame']")[0].src = str;
+                                    
+
+                                }, function(){
+                                    $("iframe[name='price_frame']")[0].src = "";
+                                    
+                                }
+                            );
 
                             if ( lcd_list.includes(String(id_))){
                                 tag_ = "<div class='Legend'></div>";
@@ -216,5 +230,9 @@
         <div>Sold Out
             <div class="Soldouttag"></div>
         </div>
+    </div>
+    
+    <div class="Footer">
+        <iframe  name="price_frame" height="480px" width="640px" frameBorder="0"></iframe>
     </div>
 </body>
