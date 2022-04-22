@@ -1,17 +1,17 @@
-name: Update Image List
+name: Update Make List
 on:
   push
 jobs:
-  updateImageList: # you can put any name here
+  updateMakeList:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2 # Checkout repo
       - shell: bash
-        run: ls -Rpm1 img/cars/ > images.txt
+        run: ls -Rpm1 img/makes/ > makes.txt
         
       - name: Save changes
         uses: actions-go/push@v1 # pushing the changes to the repo
         with:
           force: true
-          commit-files: images.txt
-          commit-message: Updating image list
+          commit-files: makes.txt
+          commit-message: Updating make list
