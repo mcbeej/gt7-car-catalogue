@@ -1,4 +1,9 @@
 img/makes/:
+Infiniti.png
+Jaguar.png
+Jeep.png
+Pagani.png
+Peugeot.png
 Pontiac.png
 Porsche.png
 RE Amemiya.png
