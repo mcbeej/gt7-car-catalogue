@@ -2,6 +2,13 @@ img/makes/:
 Infiniti.png
 Jaguar.png
 Jeep.png
+Lamborghini.png
+Lancia.png
+MINI.png
+Maserati.png
+Mazda.png
+McLaren.png
+Mercedes-Benz.png
 Pagani.png
 Peugeot.png
 Pontiac.png
